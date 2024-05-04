@@ -17,7 +17,7 @@ const Header = () => {
   const hideOpen = () => {
     setOpen(false);
   };
-//use react function make a lisk and use 
+  //use react function make a lisk and use
   const links = [
     {
       icon: <FaSearch />,
@@ -26,6 +26,7 @@ const Header = () => {
     {
       icon: <FaMoneyBill />,
       name: "Offers ",
+      sup:"new"
     },
     {
       icon: <IoMdHelp />,
@@ -38,6 +39,7 @@ const Header = () => {
     {
       icon: <IoIosCart />,
       name: "Cart",
+      sup:'(0)'
     },
   ];
 
@@ -61,7 +63,7 @@ const Header = () => {
         ></div>
       </div>
       <header className="p-3 shadow-xl ">
-        <div className="nav max-w-[1240px] mx-auto border-red-400 border flex items-center gap-3">
+        <div className="nav max-w-[1240px] mx-auto flex items-center gap-3">
           <div className="logo">
             <img src={logo} alt="" />
           </div>
@@ -75,13 +77,14 @@ const Header = () => {
               className="inline text-red-500 mx-1 text-2xl cursor-pointer"
             />
           </div>
-          <nav className="flex list-none gap-7 ml-auto font-semibold text-[18px]">
-          {/* index is usefor key value Pair  uniquly identify  */}
+          <nav className="flex list-none gap-7 ml-auto  text-[18px]">
+            {/* index is usefor key value Pair  uniquly identify  */}
             {links.map((link, index) => {
               return (
-                <li className="flex items-center gap-2 hover:text-orange-500">
+                <li className="flex items-center gap-2 hover:text-orange-500 duration-500">
                   {link.icon}
                   {link.name}
+                  <sup>{link.sup}</sup>
                 </li>
               );
             })}
