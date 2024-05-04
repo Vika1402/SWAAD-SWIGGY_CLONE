@@ -62,7 +62,7 @@ const Header = () => {
           style={{ left: open ? "0%" : "-100%" }}
         ></div>
       </div>
-      <header className="p-3 shadow-xl ">
+      <header className="p-5 shadow-xl ">
         <div className="nav max-w-[1240px] mx-auto flex items-center gap-3">
           <div className="logo">
             <img src={logo} alt="" />
