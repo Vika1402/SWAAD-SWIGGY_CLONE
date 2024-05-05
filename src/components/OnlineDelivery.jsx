@@ -33,7 +33,7 @@ const OnlineDelivery = () => {
 
           </div>
         </div>
-      <div className="grid md:grid-cols-4 grid-cols-2 gap-3 py-1">
+      <div className="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-3 py-1">
         {data.map((d, i) => {
           return <Card {...d} key={i} />;
         })}

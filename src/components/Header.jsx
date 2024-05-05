@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import logo from "../assets/swiggyLogo.svg";
 import { IoIosArrowDown, IoIosCart, IoMdHelp, IoMdLogIn } from "react-icons/io";
+import bng from '../assets/banner.png'
 import {
   FaLocationArrow,
   FaMoneyBill,
@@ -62,7 +63,7 @@ const Header = () => {
           style={{ left: open ? "0%" : "-100%" }}
         ></div>
       </div>
-      <header className="p-5 shadow-xl sticky top-0 bg-slate-200 transition  duration-500">
+      <header className="p-5 text-center shadow-xl sticky top-0 bg-white transition  duration-500 z-[9999]">
         <div className="nav max-w-[1240px] mx-auto flex items-center gap-3">
           <div className="logo">
             <img src={logo} alt="" />
@@ -89,8 +90,13 @@ const Header = () => {
               );
             })}
           </nav>
+          
         </div>
+        
       </header>
+      <div className=" w-full  shadow-xl  bg-slate-200 flex items-center justify-center" >
+            <img className="w-full" src={bng} alt="" />
+          </div>
     </>
   );
 };

@@ -41,7 +41,7 @@ const Category = () => {
           return (
             <div
               key={index}
-              className="w-[150px] shrink-0  duration-500"
+              className="w-[150px] shrink-0  duration-500 mx-auto"
               style={{ transform: `translateX(-${slide * 100}%)` }}
             >
               <img
