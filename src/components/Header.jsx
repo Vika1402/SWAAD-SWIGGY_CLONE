@@ -26,7 +26,7 @@ const Header = () => {
     {
       icon: <FaMoneyBill />,
       name: "Offers ",
-      sup:"new"
+      sup: "new",
     },
     {
       icon: <IoMdHelp />,
@@ -39,14 +39,14 @@ const Header = () => {
     {
       icon: <IoIosCart />,
       name: "Cart",
-      sup:'(0)'
+      sup: "(0)",
     },
   ];
 
   return (
     <>
       <div
-        className="black-overlay w-full
+        className=" black-overlay w-full
          h-full fixed duration-500 "
         onClick={hideOpen}
         style={{
@@ -62,7 +62,7 @@ const Header = () => {
           style={{ left: open ? "0%" : "-100%" }}
         ></div>
       </div>
-      <header className="p-5 shadow-xl ">
+      <header className="p-5 shadow-xl sticky top-0 bg-slate-200 transition  duration-500">
         <div className="nav max-w-[1240px] mx-auto flex items-center gap-3">
           <div className="logo">
             <img src={logo} alt="" />
@@ -77,7 +77,7 @@ const Header = () => {
               className="inline text-red-500 mx-1 text-2xl cursor-pointer"
             />
           </div>
-          <nav className="flex list-none gap-7 ml-auto  text-[18px]">
+          <nav className="hidden md:flex list-none gap-7 ml-auto  text-[18px]">
             {/* index is usefor key value Pair  uniquly identify  */}
             {links.map((link, index) => {
               return (
