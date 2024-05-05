@@ -4,6 +4,7 @@ import { useState } from "react";
 import Card from "./Card";
 const TopRest = () => {
   const [data, setData] = useState([]);
+  const [slide, setSlide] = useState(0);
 
   const fetchTopResaurant = async () => {
     const res = await fetch("http://localhost:5000/top-restaurant-chains");
@@ -15,7 +16,7 @@ const TopRest = () => {
   }, []);
 
   return (
-    <div className="nav max-w-[1240px] mx-auto items-center gap-3">
+    <div className="nav max-w-[1240px] mx-auto items-center gap-3 ">
       <div className="flex w-full justify-between my-3">
         <div className="text-[27px] font-bold">Whats on your mind ?</div>
         <div className="flex gap-2">
@@ -27,13 +28,13 @@ const TopRest = () => {
             <FaArrowRight />
           </div>
         </div>
-       
-       
       </div>
-      <div className="flex">
-          <Card />
-        </div>
-      
+      <div className="flex gap-2 overflow-hidden">
+        {data.map((d, i) => {
+          return <Card {...d} key={i} />;
+        })}
+      </div>
+      <hr className="my-6 border-[3px]" />
     </div>
   );
 };
