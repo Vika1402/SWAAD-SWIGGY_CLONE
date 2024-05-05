@@ -23,7 +23,7 @@ const OnlineDelivery = () => {
         
       </div>
       <div>
-          <div className="max-w-[1200px] mx-auto flex my-4 mx-4 justify-evenly">
+          <div className="max-w-[1200px] mx-auto flex my-4 justify-evenly">
             <div className="p-3 rounded-full bg-slate-200">Filter</div>
             <div className="p-3 rounded-full bg-slate-200">Sort By
 </div>
@@ -33,7 +33,7 @@ const OnlineDelivery = () => {
 
           </div>
         </div>
-      <div className="grid grid-cols-4 gap-3">
+      <div className="grid md:grid-cols-4 grid-cols-2 gap-3 py-1">
         {data.map((d, i) => {
           return <Card {...d} key={i} />;
         })}
