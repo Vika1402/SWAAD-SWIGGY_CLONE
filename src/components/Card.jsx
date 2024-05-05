@@ -1,15 +1,31 @@
 import React from "react";
-
-const Card = () => {
+import { MdStars } from "react-icons/md";
+const Card = (props) => {
   return (
-    <div className="w-[273px]  ">
-      <div className="h-[182px] rounded-[15px] overflow-hidden relative">
-      <img className="w-full h-full object-cover " src={""} alt="" />
-      <div className="image-overlay  w-full h-full top-0 absolute">item at 176</div>
-
+    <div className="w-[273px] shrink-0 grow ">
+      <div className=" group h-[182px] rounded-[15px] overflow-hidden relative">
+        <img
+          className=" duration-150  w-full h-full object-cover group-hover:scale-110 "
+          src={"http://localhost:5000/images/" + props.image}
+          alt=""
+        />
+        <div className="image-overlay  w-full h-full top-0 absolute flex items-end p-2 text-[25px] font-bold text-white tracking-tighter">
+          {props.offer}
+        </div>
       </div>
-    
-     
+      <div className="mt-2 text-xl font-bold">{props.title}</div>
+      <div className="text-xl flex items-center">
+        <MdStars className="inline text-green-600 text-2xl" />
+        {props.rating}{" "}
+        <span className="ml-3">
+          {props.minTime}-{props.maxTime} min
+        </span>
+      </div>
+      <div className="text-lg">
+        {props.name}
+        <br />
+        {props.place}
+      </div>
     </div>
   );
 };
